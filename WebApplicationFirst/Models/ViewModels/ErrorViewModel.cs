@@ -1,6 +1,7 @@
 using System;
+using WebApplicationFirst.Models.ViewModels;
 
-namespace WebApplicationFirst.Models
+namespace WebApplicationFirst.Models.ViewModels
 {
     public class ErrorViewModel
     {
