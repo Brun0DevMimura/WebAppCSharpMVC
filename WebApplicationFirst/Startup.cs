@@ -37,7 +37,8 @@ namespace WebApplicationFirst
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<WebApplicationFirstContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WebApplicationFirstContext")));
+            options.UseMySql(Configuration.GetConnectionString("WebApplicationFirstContext"), builder => builder.MigrationsAssembly("WebApplicationFirst")));       
+            // options.UseSqlServer(Configuration.GetConnectionString("WebApplicationFirstContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
