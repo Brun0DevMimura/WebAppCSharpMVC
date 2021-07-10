@@ -18,9 +18,7 @@ namespace WebApplicationFirst.Data
 
         public void Seed()
         {
-            if (_context.Departament.Any() ||
-                _context.Seller.Any() ||
-                _context.SalesRecords.Any()) 
+            if (_context.Departament.Any() || _context.Seller.Any() || _context.SalesRecords.Any()) 
             {
                 return; // DB has been seeded
             }

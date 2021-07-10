@@ -22,5 +22,10 @@ namespace WebApplicationFirst.Controllers
 
             return View(list);
         }
+
+        public IActionResult Create() {
+            return View();
+        }
+
     }
 }

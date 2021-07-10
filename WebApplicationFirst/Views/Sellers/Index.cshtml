@@ -7,12 +7,16 @@
 
 <p>Sellers index page</p>
 
+<p>
+    <a asp-action="Create" class="btn btn-default">Create New</a>
+</p>
+
 <table class="table table-striped table-hover">
     <thead>
         <tr class="success">
-            <th >
+            <th>
                 @Html.DisplayNameFor(model => model.Name)
-            </thclass=>
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
@@ -22,13 +26,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.BaseSalary)
             </th>
+            <th>
+                @Html.DisplayName("Editor") 
+            </th>
             <th></th>
-        </trclass="success">
-    </thead>
+</thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr >
+            <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
@@ -45,7 +51,7 @@
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                 </td>
+                </td>
             </tr>
 
 
