@@ -25,7 +25,7 @@ namespace WebApplicationFirst.Services
             _context.Add(obj);
             _context.SaveChanges();
         }
-        public Seller FindById(int id)
+        public Seller FindById(int id) 
         {
             return _context.Seller.FirstOrDefault(obj => obj.Id == id);
         }
